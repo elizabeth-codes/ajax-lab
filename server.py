@@ -3,7 +3,6 @@ IMPORTANT: you don't need to change this file at all to finish
 the exercise!
 """
 
-
 import random
 
 from flask import Flask, request, render_template, jsonify
@@ -20,12 +19,22 @@ FORTUNES = [
 ]
 
 WEATHER = {
-    '94110': {'forecast': 'Rainy, damp, and rich with hipsters.', 'temp': '60F'},
-    '99507': {'forecast': 'Warm, balmy, and good for sunbathing.', 'temp': '100F'},
-    '94102': {'forecast': 'Delightful, clever, and full of Python.', 'temp': '55F'},
+    '94110': {
+        'forecast': 'Rainy, damp, and rich with hipsters.',
+        'temp': '60F'
+    },
+    '99507': {
+        'forecast': 'Warm, balmy, and good for sunbathing.',
+        'temp': '100F'
+    },
+    '94102': {
+        'forecast': 'Delightful, clever, and full of Python.',
+        'temp': '55F'
+    },
 }
 
 DEFAULT_WEATHER = {'forecast': 'Kind of boring.', 'temp': '68F'}
+
 
 @app.route('/')
 def index():
